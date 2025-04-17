@@ -1,4 +1,7 @@
 import { useEffect, useState } from 'react'
+import { supabase } from '../lib/supabaseClient'
+import { useUser } from '../lib/useUser'
+import { signOut } from '../lib/authClient'
 
 interface Booking {
   id: string
@@ -9,38 +12,65 @@ interface Booking {
   status: string
 }
 
-const dummyBookings: Booking[] = [
-  {
-    id: '1',
-    customerName: 'Jane Doe',
-    service: 'Massage',
-    date: '2025-04-17',
-    time: '2:00 PM',
-    status: 'Confirmed',
-  },
-  {
-    id: '2',
-    customerName: 'John Smith',
-    service: 'Surf Lesson',
-    date: '2025-04-18',
-    time: '10:00 AM',
-    status: 'Pending',
-  },
-]
-
 export default function AdminDashboard() {
+  const { user, loading } = useUser()
   const [bookings, setBookings] = useState<Booking[]>([])
 
   useEffect(() => {
-    // For now, we'll just load dummy data
-    // Later, replace this with an API call to your backend
-    setBookings(dummyBookings)
+    const fetchData = async () => {
+      const { data, error } = await supabase
+        .from('bookings')
+        .select('*')
+        .order('date', { ascending: false })
+
+      if (error) {
+        console.error('Supabase fetch error:', error.message)
+        return
+      }
+
+      if (data) {
+        const formatted = data.map((record) => {
+          const dateObj = new Date(`${record.date}T${record.time}`)
+
+          return {
+            id: record.id,
+            customerName: record.customer_name || '',
+            service: record.service || '',
+            date: dateObj.toLocaleDateString(),
+            time: dateObj.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+            status: record.status || '',
+          }
+        })
+
+        setBookings(formatted)
+      }
+    }
+
+    fetchData()
   }, [])
+
+  if (loading) return <div className="p-6">Loading...</div>
 
   return (
     <div className="p-6">
-      <h1 className="text-2xl font-bold mb-4">Admin Dashboard</h1>
+      <div className="flex justify-between items-center mb-4">
+        <h1 className="text-2xl font-bold">Admin Dashboard</h1>
+        <button
+          onClick={async () => {
+            await signOut()
+            window.location.href = '/login'
+          }}
+          className="text-sm bg-red-500 text-white px-4 py-2 rounded"
+        >
+          Log Out
+        </button>
+      </div>
 
+      <p className="text-sm text-gray-500 mb-4">
+        Logged in as: {user?.email}
+      </p>
+
+      {/* Bookings Table */}
       <table className="min-w-full border border-gray-300 rounded shadow-sm bg-white">
         <thead className="bg-gray-100">
           <tr>

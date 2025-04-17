@@ -12,6 +12,28 @@ exports.id = "pages/login";
 exports.ids = ["pages/login"];
 exports.modules = {
 
+/***/ "(pages-dir-node)/./lib/authClient.ts":
+/*!***************************!*\
+  !*** ./lib/authClient.ts ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   getSession: () => (/* binding */ getSession),\n/* harmony export */   signInWithEmail: () => (/* binding */ signInWithEmail),\n/* harmony export */   signOut: () => (/* binding */ signOut)\n/* harmony export */ });\n/* harmony import */ var _supabaseClient__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./supabaseClient */ \"(pages-dir-node)/./lib/supabaseClient.ts\");\n\nasync function signInWithEmail(email, password) {\n    const { data, error } = await _supabaseClient__WEBPACK_IMPORTED_MODULE_0__.supabase.auth.signInWithPassword({\n        email,\n        password\n    });\n    return {\n        data,\n        error\n    };\n}\nasync function getSession() {\n    const { data } = await _supabaseClient__WEBPACK_IMPORTED_MODULE_0__.supabase.auth.getSession();\n    return data.session;\n}\nasync function signOut() {\n    await _supabaseClient__WEBPACK_IMPORTED_MODULE_0__.supabase.auth.signOut();\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHBhZ2VzLWRpci1ub2RlKS8uL2xpYi9hdXRoQ2xpZW50LnRzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7QUFBMkM7QUFFcEMsZUFBZUMsZ0JBQWdCQyxLQUFhLEVBQUVDLFFBQWdCO0lBQ25FLE1BQU0sRUFBRUMsSUFBSSxFQUFFQyxLQUFLLEVBQUUsR0FBRyxNQUFNTCxxREFBUUEsQ0FBQ00sSUFBSSxDQUFDQyxrQkFBa0IsQ0FBQztRQUM3REw7UUFDQUM7SUFDRjtJQUNBLE9BQU87UUFBRUM7UUFBTUM7SUFBTTtBQUN2QjtBQUVPLGVBQWVHO0lBQ3BCLE1BQU0sRUFBRUosSUFBSSxFQUFFLEdBQUcsTUFBTUoscURBQVFBLENBQUNNLElBQUksQ0FBQ0UsVUFBVTtJQUMvQyxPQUFPSixLQUFLSyxPQUFPO0FBQ3JCO0FBRU8sZUFBZUM7SUFDcEIsTUFBTVYscURBQVFBLENBQUNNLElBQUksQ0FBQ0ksT0FBTztBQUM3QiIsInNvdXJjZXMiOlsiL1VzZXJzL2pvc2VwaHN1ZW5vL0pheVByb2dyYW1taW5nLzI1LTQtMTYgVk9BIFdlYiAgQXBwL3Z1bHR1bi12b2EtYXBwL2xpYi9hdXRoQ2xpZW50LnRzIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IHN1cGFiYXNlIH0gZnJvbSAnLi9zdXBhYmFzZUNsaWVudCdcblxuZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIHNpZ25JbldpdGhFbWFpbChlbWFpbDogc3RyaW5nLCBwYXNzd29yZDogc3RyaW5nKSB7XG4gIGNvbnN0IHsgZGF0YSwgZXJyb3IgfSA9IGF3YWl0IHN1cGFiYXNlLmF1dGguc2lnbkluV2l0aFBhc3N3b3JkKHtcbiAgICBlbWFpbCxcbiAgICBwYXNzd29yZCxcbiAgfSlcbiAgcmV0dXJuIHsgZGF0YSwgZXJyb3IgfVxufVxuXG5leHBvcnQgYXN5bmMgZnVuY3Rpb24gZ2V0U2Vzc2lvbigpIHtcbiAgY29uc3QgeyBkYXRhIH0gPSBhd2FpdCBzdXBhYmFzZS5hdXRoLmdldFNlc3Npb24oKVxuICByZXR1cm4gZGF0YS5zZXNzaW9uXG59XG5cbmV4cG9ydCBhc3luYyBmdW5jdGlvbiBzaWduT3V0KCkge1xuICBhd2FpdCBzdXBhYmFzZS5hdXRoLnNpZ25PdXQoKVxufVxuIl0sIm5hbWVzIjpbInN1cGFiYXNlIiwic2lnbkluV2l0aEVtYWlsIiwiZW1haWwiLCJwYXNzd29yZCIsImRhdGEiLCJlcnJvciIsImF1dGgiLCJzaWduSW5XaXRoUGFzc3dvcmQiLCJnZXRTZXNzaW9uIiwic2Vzc2lvbiIsInNpZ25PdXQiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(pages-dir-node)/./lib/authClient.ts\n");
+
+/***/ }),
+
+/***/ "(pages-dir-node)/./lib/supabaseClient.ts":
+/*!*******************************!*\
+  !*** ./lib/supabaseClient.ts ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   supabase: () => (/* binding */ supabase)\n/* harmony export */ });\n/* harmony import */ var _supabase_supabase_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @supabase/supabase-js */ \"@supabase/supabase-js\");\n/* harmony import */ var _supabase_supabase_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_supabase_supabase_js__WEBPACK_IMPORTED_MODULE_0__);\n\nconst supabaseUrl = \"https://htolgvmwhtqqmihtkmkw.supabase.co\";\nconst supabaseAnonKey = \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh0b2xndm13aHRxcW1paHRrbWt3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQ4MjU5NzIsImV4cCI6MjA2MDQwMTk3Mn0.O0Xs2bGwg7mkic5o2_hOK7fPSoWR5u47JKG52nHphgA\";\nconst supabase = (0,_supabase_supabase_js__WEBPACK_IMPORTED_MODULE_0__.createClient)(supabaseUrl, supabaseAnonKey);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHBhZ2VzLWRpci1ub2RlKS8uL2xpYi9zdXBhYmFzZUNsaWVudC50cyIsIm1hcHBpbmdzIjoiOzs7Ozs7QUFBb0Q7QUFFcEQsTUFBTUMsY0FBY0MsMENBQW9DO0FBQ3hELE1BQU1HLGtCQUFrQkgsa05BQXlDO0FBRTFELE1BQU1LLFdBQVdQLG1FQUFZQSxDQUFDQyxhQUFhSSxpQkFBZ0IiLCJzb3VyY2VzIjpbIi9Vc2Vycy9qb3NlcGhzdWVuby9KYXlQcm9ncmFtbWluZy8yNS00LTE2IFZPQSBXZWIgIEFwcC92dWx0dW4tdm9hLWFwcC9saWIvc3VwYWJhc2VDbGllbnQudHMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgY3JlYXRlQ2xpZW50IH0gZnJvbSAnQHN1cGFiYXNlL3N1cGFiYXNlLWpzJ1xuXG5jb25zdCBzdXBhYmFzZVVybCA9IHByb2Nlc3MuZW52Lk5FWFRfUFVCTElDX1NVUEFCQVNFX1VSTCFcbmNvbnN0IHN1cGFiYXNlQW5vbktleSA9IHByb2Nlc3MuZW52Lk5FWFRfUFVCTElDX1NVUEFCQVNFX0FOT05fS0VZIVxuXG5leHBvcnQgY29uc3Qgc3VwYWJhc2UgPSBjcmVhdGVDbGllbnQoc3VwYWJhc2VVcmwsIHN1cGFiYXNlQW5vbktleSlcbiJdLCJuYW1lcyI6WyJjcmVhdGVDbGllbnQiLCJzdXBhYmFzZVVybCIsInByb2Nlc3MiLCJlbnYiLCJORVhUX1BVQkxJQ19TVVBBQkFTRV9VUkwiLCJzdXBhYmFzZUFub25LZXkiLCJORVhUX1BVQkxJQ19TVVBBQkFTRV9BTk9OX0tFWSIsInN1cGFiYXNlIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///(pages-dir-node)/./lib/supabaseClient.ts\n");
+
+/***/ }),
+
 /***/ "(pages-dir-node)/./node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?kind=PAGES&page=%2Flogin&preferredRegion=&absolutePagePath=.%2Fpages%2Flogin.tsx&absoluteAppPath=private-next-pages%2F_app&absoluteDocumentPath=private-next-pages%2F_document&middlewareConfigBase64=e30%3D!":
 /*!***********************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?kind=PAGES&page=%2Flogin&preferredRegion=&absolutePagePath=.%2Fpages%2Flogin.tsx&absoluteAppPath=private-next-pages%2F_app&absoluteDocumentPath=private-next-pages%2F_document&middlewareConfigBase64=e30%3D! ***!
@@ -41,7 +63,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Login)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n\nfunction Login() {\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n        className: \"flex flex-col items-center justify-center h-screen bg-gray-100\",\n        children: [\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"h1\", {\n                className: \"text-3xl font-bold mb-4\",\n                children: \"Login\"\n            }, void 0, false, {\n                fileName: \"/Users/josephsueno/JayProgramming/25-4-16 VOA Web  App/vultun-voa-app/pages/login.tsx\",\n                lineNumber: 4,\n                columnNumber: 7\n            }, this),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"input\", {\n                type: \"email\",\n                placeholder: \"Email\",\n                className: \"mb-2 p-2 border rounded\"\n            }, void 0, false, {\n                fileName: \"/Users/josephsueno/JayProgramming/25-4-16 VOA Web  App/vultun-voa-app/pages/login.tsx\",\n                lineNumber: 5,\n                columnNumber: 7\n            }, this),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"input\", {\n                type: \"password\",\n                placeholder: \"Password\",\n                className: \"mb-4 p-2 border rounded\"\n            }, void 0, false, {\n                fileName: \"/Users/josephsueno/JayProgramming/25-4-16 VOA Web  App/vultun-voa-app/pages/login.tsx\",\n                lineNumber: 6,\n                columnNumber: 7\n            }, this),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"button\", {\n                className: \"bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600\",\n                children: \"Sign In\"\n            }, void 0, false, {\n                fileName: \"/Users/josephsueno/JayProgramming/25-4-16 VOA Web  App/vultun-voa-app/pages/login.tsx\",\n                lineNumber: 7,\n                columnNumber: 7\n            }, this)\n        ]\n    }, void 0, true, {\n        fileName: \"/Users/josephsueno/JayProgramming/25-4-16 VOA Web  App/vultun-voa-app/pages/login.tsx\",\n        lineNumber: 3,\n        columnNumber: 5\n    }, this);\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHBhZ2VzLWRpci1ub2RlKS8uL3BhZ2VzL2xvZ2luLnRzeCIsIm1hcHBpbmdzIjoiOzs7Ozs7O0FBQWUsU0FBU0E7SUFDdEIscUJBQ0UsOERBQUNDO1FBQUlDLFdBQVU7OzBCQUNiLDhEQUFDQztnQkFBR0QsV0FBVTswQkFBMEI7Ozs7OzswQkFDeEMsOERBQUNFO2dCQUFNQyxNQUFLO2dCQUFRQyxhQUFZO2dCQUFRSixXQUFVOzs7Ozs7MEJBQ2xELDhEQUFDRTtnQkFBTUMsTUFBSztnQkFBV0MsYUFBWTtnQkFBV0osV0FBVTs7Ozs7OzBCQUN4RCw4REFBQ0s7Z0JBQU9MLFdBQVU7MEJBQTZEOzs7Ozs7Ozs7Ozs7QUFLckYiLCJzb3VyY2VzIjpbIi9Vc2Vycy9qb3NlcGhzdWVuby9KYXlQcm9ncmFtbWluZy8yNS00LTE2IFZPQSBXZWIgIEFwcC92dWx0dW4tdm9hLWFwcC9wYWdlcy9sb2dpbi50c3giXSwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gTG9naW4oKSB7XG4gIHJldHVybiAoXG4gICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4IGZsZXgtY29sIGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciBoLXNjcmVlbiBiZy1ncmF5LTEwMFwiPlxuICAgICAgPGgxIGNsYXNzTmFtZT1cInRleHQtM3hsIGZvbnQtYm9sZCBtYi00XCI+TG9naW48L2gxPlxuICAgICAgPGlucHV0IHR5cGU9XCJlbWFpbFwiIHBsYWNlaG9sZGVyPVwiRW1haWxcIiBjbGFzc05hbWU9XCJtYi0yIHAtMiBib3JkZXIgcm91bmRlZFwiIC8+XG4gICAgICA8aW5wdXQgdHlwZT1cInBhc3N3b3JkXCIgcGxhY2Vob2xkZXI9XCJQYXNzd29yZFwiIGNsYXNzTmFtZT1cIm1iLTQgcC0yIGJvcmRlciByb3VuZGVkXCIgLz5cbiAgICAgIDxidXR0b24gY2xhc3NOYW1lPVwiYmctYmx1ZS01MDAgdGV4dC13aGl0ZSBweC00IHB5LTIgcm91bmRlZCBob3ZlcjpiZy1ibHVlLTYwMFwiPlxuICAgICAgICBTaWduIEluXG4gICAgICA8L2J1dHRvbj5cbiAgICA8L2Rpdj5cbiAgKVxufVxuIl0sIm5hbWVzIjpbIkxvZ2luIiwiZGl2IiwiY2xhc3NOYW1lIiwiaDEiLCJpbnB1dCIsInR5cGUiLCJwbGFjZWhvbGRlciIsImJ1dHRvbiJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(pages-dir-node)/./pages/login.tsx\n");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ LoginPage)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/router */ \"(pages-dir-node)/./node_modules/next/router.js\");\n/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _lib_authClient__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../lib/authClient */ \"(pages-dir-node)/./lib/authClient.ts\");\n\n\n\n\nfunction LoginPage() {\n    const [email, setEmail] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)('');\n    const [password, setPassword] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)('');\n    const [error, setError] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)('');\n    const router = (0,next_router__WEBPACK_IMPORTED_MODULE_2__.useRouter)();\n    const handleLogin = async (e)=>{\n        e.preventDefault();\n        const { error } = await (0,_lib_authClient__WEBPACK_IMPORTED_MODULE_3__.signInWithEmail)(email, password);\n        if (error) {\n            setError(error.message);\n        } else {\n            router.push('/admin');\n        }\n    };\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n        className: \"min-h-screen flex items-center justify-center bg-gray-100\",\n        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"form\", {\n            onSubmit: handleLogin,\n            className: \"bg-white p-6 rounded shadow w-96\",\n            children: [\n                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"h2\", {\n                    className: \"text-xl font-bold mb-4\",\n                    children: \"Staff Login\"\n                }, void 0, false, {\n                    fileName: \"/Users/josephsueno/JayProgramming/25-4-16 VOA Web  App/vultun-voa-app/pages/login.tsx\",\n                    lineNumber: 24,\n                    columnNumber: 9\n                }, this),\n                error && /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                    className: \"text-red-600 mb-2\",\n                    children: error\n                }, void 0, false, {\n                    fileName: \"/Users/josephsueno/JayProgramming/25-4-16 VOA Web  App/vultun-voa-app/pages/login.tsx\",\n                    lineNumber: 25,\n                    columnNumber: 19\n                }, this),\n                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"input\", {\n                    type: \"email\",\n                    placeholder: \"Email\",\n                    className: \"w-full border p-2 mb-3\",\n                    value: email,\n                    onChange: (e)=>setEmail(e.target.value)\n                }, void 0, false, {\n                    fileName: \"/Users/josephsueno/JayProgramming/25-4-16 VOA Web  App/vultun-voa-app/pages/login.tsx\",\n                    lineNumber: 26,\n                    columnNumber: 9\n                }, this),\n                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"input\", {\n                    type: \"password\",\n                    placeholder: \"Password\",\n                    className: \"w-full border p-2 mb-4\",\n                    value: password,\n                    onChange: (e)=>setPassword(e.target.value)\n                }, void 0, false, {\n                    fileName: \"/Users/josephsueno/JayProgramming/25-4-16 VOA Web  App/vultun-voa-app/pages/login.tsx\",\n                    lineNumber: 33,\n                    columnNumber: 9\n                }, this),\n                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"button\", {\n                    className: \"bg-black text-white w-full py-2 rounded hover:bg-gray-800\",\n                    children: \"Log In\"\n                }, void 0, false, {\n                    fileName: \"/Users/josephsueno/JayProgramming/25-4-16 VOA Web  App/vultun-voa-app/pages/login.tsx\",\n                    lineNumber: 40,\n                    columnNumber: 9\n                }, this)\n            ]\n        }, void 0, true, {\n            fileName: \"/Users/josephsueno/JayProgramming/25-4-16 VOA Web  App/vultun-voa-app/pages/login.tsx\",\n            lineNumber: 23,\n            columnNumber: 7\n        }, this)\n    }, void 0, false, {\n        fileName: \"/Users/josephsueno/JayProgramming/25-4-16 VOA Web  App/vultun-voa-app/pages/login.tsx\",\n        lineNumber: 22,\n        columnNumber: 5\n    }, this);\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHBhZ2VzLWRpci1ub2RlKS8uL3BhZ2VzL2xvZ2luLnRzeCIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7QUFBZ0M7QUFDTztBQUNZO0FBRXBDLFNBQVNHO0lBQ3RCLE1BQU0sQ0FBQ0MsT0FBT0MsU0FBUyxHQUFHTCwrQ0FBUUEsQ0FBQztJQUNuQyxNQUFNLENBQUNNLFVBQVVDLFlBQVksR0FBR1AsK0NBQVFBLENBQUM7SUFDekMsTUFBTSxDQUFDUSxPQUFPQyxTQUFTLEdBQUdULCtDQUFRQSxDQUFDO0lBQ25DLE1BQU1VLFNBQVNULHNEQUFTQTtJQUV4QixNQUFNVSxjQUFjLE9BQU9DO1FBQ3pCQSxFQUFFQyxjQUFjO1FBQ2hCLE1BQU0sRUFBRUwsS0FBSyxFQUFFLEdBQUcsTUFBTU4sZ0VBQWVBLENBQUNFLE9BQU9FO1FBQy9DLElBQUlFLE9BQU87WUFDVEMsU0FBU0QsTUFBTU0sT0FBTztRQUN4QixPQUFPO1lBQ0xKLE9BQU9LLElBQUksQ0FBQztRQUNkO0lBQ0Y7SUFFQSxxQkFDRSw4REFBQ0M7UUFBSUMsV0FBVTtrQkFDYiw0RUFBQ0M7WUFBS0MsVUFBVVI7WUFBYU0sV0FBVTs7OEJBQ3JDLDhEQUFDRztvQkFBR0gsV0FBVTs4QkFBeUI7Ozs7OztnQkFDdENULHVCQUFTLDhEQUFDYTtvQkFBRUosV0FBVTs4QkFBcUJUOzs7Ozs7OEJBQzVDLDhEQUFDYztvQkFDQ0MsTUFBSztvQkFDTEMsYUFBWTtvQkFDWlAsV0FBVTtvQkFDVlEsT0FBT3JCO29CQUNQc0IsVUFBVSxDQUFDZCxJQUFNUCxTQUFTTyxFQUFFZSxNQUFNLENBQUNGLEtBQUs7Ozs7Ozs4QkFFMUMsOERBQUNIO29CQUNDQyxNQUFLO29CQUNMQyxhQUFZO29CQUNaUCxXQUFVO29CQUNWUSxPQUFPbkI7b0JBQ1BvQixVQUFVLENBQUNkLElBQU1MLFlBQVlLLEVBQUVlLE1BQU0sQ0FBQ0YsS0FBSzs7Ozs7OzhCQUU3Qyw4REFBQ0c7b0JBQU9YLFdBQVU7OEJBQTREOzs7Ozs7Ozs7Ozs7Ozs7OztBQU10RiIsInNvdXJjZXMiOlsiL1VzZXJzL2pvc2VwaHN1ZW5vL0pheVByb2dyYW1taW5nLzI1LTQtMTYgVk9BIFdlYiAgQXBwL3Z1bHR1bi12b2EtYXBwL3BhZ2VzL2xvZ2luLnRzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyB1c2VTdGF0ZSB9IGZyb20gJ3JlYWN0J1xuaW1wb3J0IHsgdXNlUm91dGVyIH0gZnJvbSAnbmV4dC9yb3V0ZXInXG5pbXBvcnQgeyBzaWduSW5XaXRoRW1haWwgfSBmcm9tICcuLi9saWIvYXV0aENsaWVudCdcblxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gTG9naW5QYWdlKCkge1xuICBjb25zdCBbZW1haWwsIHNldEVtYWlsXSA9IHVzZVN0YXRlKCcnKVxuICBjb25zdCBbcGFzc3dvcmQsIHNldFBhc3N3b3JkXSA9IHVzZVN0YXRlKCcnKVxuICBjb25zdCBbZXJyb3IsIHNldEVycm9yXSA9IHVzZVN0YXRlKCcnKVxuICBjb25zdCByb3V0ZXIgPSB1c2VSb3V0ZXIoKVxuXG4gIGNvbnN0IGhhbmRsZUxvZ2luID0gYXN5bmMgKGU6IFJlYWN0LkZvcm1FdmVudCkgPT4ge1xuICAgIGUucHJldmVudERlZmF1bHQoKVxuICAgIGNvbnN0IHsgZXJyb3IgfSA9IGF3YWl0IHNpZ25JbldpdGhFbWFpbChlbWFpbCwgcGFzc3dvcmQpXG4gICAgaWYgKGVycm9yKSB7XG4gICAgICBzZXRFcnJvcihlcnJvci5tZXNzYWdlKVxuICAgIH0gZWxzZSB7XG4gICAgICByb3V0ZXIucHVzaCgnL2FkbWluJylcbiAgICB9XG4gIH1cblxuICByZXR1cm4gKFxuICAgIDxkaXYgY2xhc3NOYW1lPVwibWluLWgtc2NyZWVuIGZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIGJnLWdyYXktMTAwXCI+XG4gICAgICA8Zm9ybSBvblN1Ym1pdD17aGFuZGxlTG9naW59IGNsYXNzTmFtZT1cImJnLXdoaXRlIHAtNiByb3VuZGVkIHNoYWRvdyB3LTk2XCI+XG4gICAgICAgIDxoMiBjbGFzc05hbWU9XCJ0ZXh0LXhsIGZvbnQtYm9sZCBtYi00XCI+U3RhZmYgTG9naW48L2gyPlxuICAgICAgICB7ZXJyb3IgJiYgPHAgY2xhc3NOYW1lPVwidGV4dC1yZWQtNjAwIG1iLTJcIj57ZXJyb3J9PC9wPn1cbiAgICAgICAgPGlucHV0XG4gICAgICAgICAgdHlwZT1cImVtYWlsXCJcbiAgICAgICAgICBwbGFjZWhvbGRlcj1cIkVtYWlsXCJcbiAgICAgICAgICBjbGFzc05hbWU9XCJ3LWZ1bGwgYm9yZGVyIHAtMiBtYi0zXCJcbiAgICAgICAgICB2YWx1ZT17ZW1haWx9XG4gICAgICAgICAgb25DaGFuZ2U9eyhlKSA9PiBzZXRFbWFpbChlLnRhcmdldC52YWx1ZSl9XG4gICAgICAgIC8+XG4gICAgICAgIDxpbnB1dFxuICAgICAgICAgIHR5cGU9XCJwYXNzd29yZFwiXG4gICAgICAgICAgcGxhY2Vob2xkZXI9XCJQYXNzd29yZFwiXG4gICAgICAgICAgY2xhc3NOYW1lPVwidy1mdWxsIGJvcmRlciBwLTIgbWItNFwiXG4gICAgICAgICAgdmFsdWU9e3Bhc3N3b3JkfVxuICAgICAgICAgIG9uQ2hhbmdlPXsoZSkgPT4gc2V0UGFzc3dvcmQoZS50YXJnZXQudmFsdWUpfVxuICAgICAgICAvPlxuICAgICAgICA8YnV0dG9uIGNsYXNzTmFtZT1cImJnLWJsYWNrIHRleHQtd2hpdGUgdy1mdWxsIHB5LTIgcm91bmRlZCBob3ZlcjpiZy1ncmF5LTgwMFwiPlxuICAgICAgICAgIExvZyBJblxuICAgICAgICA8L2J1dHRvbj5cbiAgICAgIDwvZm9ybT5cbiAgICA8L2Rpdj5cbiAgKVxufVxuIl0sIm5hbWVzIjpbInVzZVN0YXRlIiwidXNlUm91dGVyIiwic2lnbkluV2l0aEVtYWlsIiwiTG9naW5QYWdlIiwiZW1haWwiLCJzZXRFbWFpbCIsInBhc3N3b3JkIiwic2V0UGFzc3dvcmQiLCJlcnJvciIsInNldEVycm9yIiwicm91dGVyIiwiaGFuZGxlTG9naW4iLCJlIiwicHJldmVudERlZmF1bHQiLCJtZXNzYWdlIiwicHVzaCIsImRpdiIsImNsYXNzTmFtZSIsImZvcm0iLCJvblN1Ym1pdCIsImgyIiwicCIsImlucHV0IiwidHlwZSIsInBsYWNlaG9sZGVyIiwidmFsdWUiLCJvbkNoYW5nZSIsInRhcmdldCIsImJ1dHRvbiJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(pages-dir-node)/./pages/login.tsx\n");
 
 /***/ }),
 
@@ -52,6 +74,28 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ (() => {
 
 
+
+/***/ }),
+
+/***/ "@supabase/supabase-js":
+/*!****************************************!*\
+  !*** external "@supabase/supabase-js" ***!
+  \****************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("@supabase/supabase-js");
+
+/***/ }),
+
+/***/ "fs":
+/*!*********************!*\
+  !*** external "fs" ***!
+  \*********************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("fs");
 
 /***/ }),
 
@@ -88,6 +132,17 @@ module.exports = require("react");
 
 /***/ }),
 
+/***/ "react-dom":
+/*!****************************!*\
+  !*** external "react-dom" ***!
+  \****************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react-dom");
+
+/***/ }),
+
 /***/ "react/jsx-dev-runtime":
 /*!****************************************!*\
   !*** external "react/jsx-dev-runtime" ***!
@@ -107,6 +162,28 @@ module.exports = require("react/jsx-dev-runtime");
 
 "use strict";
 module.exports = require("react/jsx-runtime");
+
+/***/ }),
+
+/***/ "stream":
+/*!*************************!*\
+  !*** external "stream" ***!
+  \*************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("stream");
+
+/***/ }),
+
+/***/ "zlib":
+/*!***********************!*\
+  !*** external "zlib" ***!
+  \***********************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("zlib");
 
 /***/ })
 
