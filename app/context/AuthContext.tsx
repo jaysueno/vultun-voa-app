@@ -60,7 +60,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         email: cleanEmail,
         password,
         options: {
-          emailRedirectTo: `${window.location.origin}/auth/callback?email=${encodeURIComponent(cleanEmail)}`,
+          emailRedirectTo: `${window.location.origin}/callback?email=${encodeURIComponent(cleanEmail)}`,
           data: { full_name: fullName }
         }
       });
@@ -136,7 +136,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const signOut = async () => {
     await supabase.auth.signOut();
-    router.push('/auth/login');
+    router.push('/login');
   };
 
   const value = { user, session, loading, signUp, signIn, signOut };
