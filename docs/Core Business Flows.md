@@ -1,0 +1,23 @@
+Here is a list of core business flows. 
+
+1. The receptionist receives inquiries via WhatsApp or in person for massage, Pilates, biohacking, surf lessons, or any other service. They will then ask the customer for their information and manually enter it into our bookings and calendar system. If the customer has a specific date, time, room, therapist, instructor, class, or any other preference, the receptionist will check our system for availability and book the client accordingly. If there isn’t, our team will notify the customer of other options based on their view and a list of alternative time slots, locations, classes, team members, etc. The customer will then receive a confirmation email and a WhatsApp message informing them that they are signed up or on a waitlist. The customer will either prepay or pay after the service in cash, by card, via GCash, or using another payment method. Before and after each session, we have a survey for customers to complete, allowing us to better understand their needs and ask them to rate our service. The receptionist will then manually enter this data into our visits table and attach it to a specific customer's bookings or services.   
+   1. We can also direct customers to our website, where they can learn more, book everything online, view the calendar, and make any necessary adjustments or purchases.  
+2. A customer inquires about passes or memberships through our WhatsApp or in person. We will provide them with the option to pay for it on the spot with our receptionist, and the receptionist will enter their data and then provide them with their customer membership or pass information and card. We will notify them via email with their membership or pass profile on our web app and provide a special digital card for them. They will pay in person.   
+   1. We can also direct them to our website, where they can view our membership types and purchase directly, create a profile, and manage their bookings or reservations independently.   
+3. At the end of the day, we will pay out our commissions to our therapists, instructors, and facilitators. We will have built-in logic to automatically calculate commissions. This includes if there are manually adjusted commissions.   
+4. Our team can do manual overrides on commissions, discounts, and pricing. They will need to provide notes explaining why, and we will then use these in the final calculations for each day.   
+5. Customers will find us online and want to book, purchase passes, memberships, rent surfboards and other equipment, buy gift cards, book a drop-in, and purchase products and services. They will then have a profile where they can track all of their purchases, credits, service and class history, payments, and products. In the future, we will also have biometric data that they can access. We will have dashboards on their progress and recommendations in their profiles based on their metrics and goals, and current accomplishments.   
+6. Customers will also have the ability to book sessions online, view the calendar and availability, cancel sessions, and reserve equipment and rooms.   
+7. Many of our customers are in-person walk-ins or reserve based on messaging us on WhatsApp or calling. Therefore, our receptionist team will play a central role in the business process.   
+8. With passes, memberships, waitlists, and other services, our VOA app can notify clients via automation when they are about to run out of credits, passes, membership, waitlist, etc. Our receptionists will also be notified when a customer checks in or inquires about a service, if their passes, etc., are about to expire or have already expired.   
+9. Some dashboards will automatically calculate all the day's stats:  
+   1. Number of services by type  
+   2. Number of customers  
+   3. List of services, customers, bookings, and times  
+   4. Gross sales, discounts, cancellations, adjustments, and net revenue at the end of the day  
+   5. Commissions and non-cash tips transactions for staff members  
+   6. Ratings and reviews   
+10. We will have forms that our team can use to enter data, such as bookings, new customers, and survey information etc.  
+11. We will have the ability to alter, edit, update, and delete bookings, customers, and any other relevant records in different views, like calendar, list, etc.   
+12. We will use this system as the point of sale (POS) when our customers check out after their service, or sometimes before they enter the class, or if they wish to purchase a product or a pass/membership. This POS dashboard and form will be linked to the sales line items, transactions, and payment system, among others. It will also generate a receipt for our customer upon request.   
+13. 
